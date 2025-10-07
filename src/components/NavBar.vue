@@ -1,4 +1,16 @@
-<!-- ... existing code ... -->
+<script setup lang="ts">
+import { isDark } from '~/logics'
+</script>
+
+<template>
+  <header class="header">
+    <RouterLink
+      to="/"
+      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none"
+      focusable="false"
+    >
+      <Logo />
+    </RouterLink>
     <nav class="nav">
       <div class="spacer" />
       <div class="right" print:op0>
