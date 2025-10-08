@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@10.11.0",
   "scripts": {
-    "build": "npm run static && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
+    "build": "npm run static && npm run redirects && cross-env NODE_ENV=production vite-ssg build && tsx ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
     "dev": "vite --port 3333 --open",
     "preview": "vite preview",
     "static": "rimraf temp && degit antfu/static temp --force",
@@ -103,3 +103,6 @@
     "*": "eslint --fix"
   }
 }
+
+
+
