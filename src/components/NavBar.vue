@@ -1,32 +1,16 @@
 <script setup lang="ts">
-function toTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  })
-}
-
-const { y: scroll } = useWindowScroll()
+import { isDark, toggleDark } from '~/logics'
 </script>
 
 <template>
   <header class="header z-40">
     <RouterLink
-      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none"
+      class="w-12 h-12 absolute xl:fixed l-0 t-0"
       to="/"
-      focusable="false"
+      aria-label="logo"
     >
       <Logo />
     </RouterLink>
-    <button
-      title="Scroll to top"
-      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
-      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
-      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
-      @click="toTop()"
-    >
-      <div i-ri-arrow-up-line />
-    </button>
     <nav class="nav">
       <div class="spacer" />
       <div class="right" print:op0>
@@ -38,26 +22,14 @@ const { y: scroll } = useWindowScroll()
           <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
-        <!-- <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
-          Talks
-        </RouterLink> -->
-        <!-- <RouterLink to="/sponsors-list" title="Sponsors">
-          <span class="lt-md:hidden">Sponsors</span>
-          <div i-ri-heart-line class="md:hidden" />
-        </RouterLink> -->
-        <!-- <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
-          <div i-ri-mic-line />
-        </RouterLink> -->
         <RouterLink to="/photos" title="Photos">
           <div i-ri-camera-3-line />
         </RouterLink>
-        <!--<RouterLink to="/demos" title="Demos">
-          <div i-ri-screenshot-line />
-        </RouterLink> -->
-        <!-- <RouterLink to="/chat" title="Let's Chat">
-          <div i-ri-chat-1-line />
-        </RouterLink> -->
-        <a href="https://www.instagram.com/kenrighan/" target="_blank" title="Instagram" class="lt-md:hidden">
+        <RouterLink to="/media" title="Media">
+          <span class="lt-md:hidden">Media</span>
+          <div i-ri-film-line md:hidden />
+        </RouterLink>
+        <a href="https://www.instagram.com/kenrighan" target="_blank" title="Instagram" class="lt-md:hidden">
           <div i-simple-icons-instagram />
         </a>
         <a href="https://github.com/yukitami" target="_blank" title="GitHub" class="lt-md:hidden">
@@ -73,16 +45,9 @@ const { y: scroll } = useWindowScroll()
 </template>
 
 <style scoped>
-.header h1 {
-  margin-bottom: 0;
+.header {
+  height: 3.75rem;
 }
-
-.logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-}
-
 .nav {
   padding: 2rem;
   width: 100%;
@@ -90,15 +55,9 @@ const { y: scroll } = useWindowScroll()
   grid-template-columns: auto max-content;
   box-sizing: border-box;
 }
-
 .nav > * {
-  margin: auto;
+  margin: auto 0;
 }
-
-.nav img {
-  margin-bottom: 0;
-}
-
 .nav a {
   cursor: pointer;
   text-decoration: none;
@@ -107,19 +66,17 @@ const { y: scroll } = useWindowScroll()
   opacity: 0.6;
   outline: none;
 }
-
 .nav a:hover {
   opacity: 1;
   text-decoration-color: inherit;
 }
-
 .nav .right {
   display: grid;
   grid-gap: 1.2rem;
   grid-auto-flow: column;
 }
-
 .nav .right > * {
   margin: auto;
 }
 </style>
+
