@@ -23,7 +23,8 @@ import { isDark, toggleDark } from '~/logics'
           <div i-ri-lightbulb-line class="md:hidden" />
         </RouterLink>
         <RouterLink to="/photos" title="Photos">
-          <div i-ri-camera-3-line />
+           <span class="lt-md:hidden">Photos</span>
+          <div i-ri-camera-3-line md:hidden />
         </RouterLink>
         <RouterLink to="/media" title="Media">
           <span class="lt-md:hidden">Media</span>
@@ -79,4 +80,3 @@ import { isDark, toggleDark } from '~/logics'
   margin: auto;
 }
 </style>
-
