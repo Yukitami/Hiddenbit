@@ -5,10 +5,10 @@ image: https://antfu.me/og.png
 art: random
 ---
 Hi !! I’m Kenrighan. I study, build, and think a lot about what *meaning* means and how it comes to be .
-I tried to make projects that are weird, they don not have to be good just unique.
+I tried to make projects that are weird, they don't have to be good just unique.
 You can find my [projects list here](/projects).
 
-I also ocasionaly write [blog posts](/posts) about whatever catches my attention.
+I also occasionaly write [blog posts](/posts) about whatever catches my attention.
 
 Outside of programming, I enjoy doing photography, I post [photos on this page](/photos), 
 I love anime, movies and music, Here's my list of [favorite media](/media).
