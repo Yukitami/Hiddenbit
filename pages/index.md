@@ -2,7 +2,7 @@
 title: Hi :) 
 description: Kenrighan's Website 
 image: https://antfu.me/og.png 
-art: plumHey!
+art: random
 ---
 Hey! I'm Anthony Fu, a fanatical open sourceror and design engineer.
 
